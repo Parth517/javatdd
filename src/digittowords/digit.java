@@ -30,4 +30,17 @@ public class digit {
             failedTests++;
         }
     }
+
+    private static boolean testWords(int num, String expectedResult) {
+        String result=toWords(num);
+        if(result==expectedResult){
+            System.out.println("Test passed expected "+expectedResult+" got "+result);
+            return true;
+        }else{
+            System.out.println("Test failed expected "+expectedResult+" got "+ result);
+            return false;
+        }
+    }
+
+    
 }
