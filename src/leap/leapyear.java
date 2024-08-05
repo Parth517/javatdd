@@ -45,15 +45,7 @@ public class leapyear {
     }
 
     private static boolean isLeap(int year) {
-        boolean ans;
-        if (year % 400 == 0) {
-            ans = true;
-        } else if (year % 4 == 0 && year % 100 != 0) {
-            ans = true;
-        } else {
-            ans = false;
-        }
-        return ans;
+        return year%400==0||year%4==0&&year%100!=0?true:false;
     }
 
 }
