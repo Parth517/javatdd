@@ -13,12 +13,19 @@ public class palindrome {
         }else{
             failedTests++;
         }
-        if(testIsPalindrome("abcdcba",false)){
+        if(testIsPalindrome("abcdcba",true)){
+            passedTests++;
+        }else{
+            failedTests++;
+        }
+        if(testIsPalindrome("abcdecba",false)){
             passedTests++;
         }else{
             failedTests++;
         }
         
+        System.out.println("No of tests passed:"+passedTests);
+        System.out.println("No of tests failed:"+failedTests);
     }
 
     private static boolean testIsPalindrome(String condition, boolean expectedResult) {
@@ -27,12 +34,19 @@ public class palindrome {
             System.out.println("Test passed expected "+expectedResult+" got "+result);
             return true;
         }else{
-            System.out.println("Test failed expected "+ expectedResult+ " got"+result);
+            System.out.println("Test failed expected "+ expectedResult+ " got "+result);
             return false;
         }
      }
 
     private static boolean isPalindrome(String condition) {
+        System.out.println(condition.length());
+        int length=condition.length();
+        for(int i=0;i<length/2;i++){
+            if(condition.charAt(i)!=condition.charAt(length-i-1)){
+                return false;
+            }
+        }
         return true;
     }
 }
