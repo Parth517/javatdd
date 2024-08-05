@@ -25,4 +25,8 @@ public class leapyear {
             failedTests++;
         }
     }
+
+    private static boolean testIsLeap(int i, boolean b) {
+        throw new UnsupportedOperationException("Unimplemented method 'testIsLeap'");
+    }
 }
