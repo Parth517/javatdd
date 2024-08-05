@@ -34,6 +34,21 @@ public class digit {
         }else{
             failedTests++;
         }
+        if(testWords(1000,"one thousand")){
+            passedTests++;
+        }else{
+            failedTests++;
+        }
+        if(testWords(1233,"one thousand two hundred thirty-three")){
+            passedTests++;
+        }else{
+            failedTests++;
+        }
+        if(testWords(100000,"one lakhs")){
+            passedTests++;
+        }else{
+            failedTests++;
+        }
         System.out.println("No of test passed:"+passedTests);
         System.out.println("No of tests failed:"+failedTests);
     }
@@ -59,6 +74,10 @@ public class digit {
             ans=hundreds[(int) num/10]+(num%10==0?"":"-"+toWords(num%10));
         }if(num>=100 && num<1000){
             ans=units[(int) num/100]+" hundred"+(num%100==0?"":" "+toWords(num%100));
+        }if(num>=1000 && num<100000){
+            ans=units[(int) num/1000]+ " thousand"+(num%1000==0?"":" "+toWords(num%1000));
+        }if(num>=100000 && num<10000000){
+            ans=units[(int) num/100000]+" lakhs"+(num%10000==0?"":" "+toWords(num%10000));
         }
         return ans;
     }
