@@ -1,6 +1,4 @@
 
-
-
 public class palindrome {
     public static void main(String[] args) {
         int passedTests=0;
@@ -21,5 +19,9 @@ public class palindrome {
             failedTests++;
         }
         
+    }
+
+    private static boolean testIsPalindrome(String string, boolean b) {
+        throw new UnsupportedOperationException("Unimplemented method 'testIsPalindrome'");
     }
 }
