@@ -34,4 +34,8 @@ public class leapyear {
             System.out.println("Test failed "+expectedResult+" got "+result);
         }
     }
+
+    private static boolean isLeap(int i) {
+        throw new UnsupportedOperationException("Unimplemented method 'isLeap'");
+    }
 }
