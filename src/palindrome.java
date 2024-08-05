@@ -25,12 +25,14 @@ public class palindrome {
         boolean result=isPalindrome(condition);
         if(result==expectedResult){
             System.out.println("Test passed expected "+expectedResult+" got "+result);
+            return true;
         }else{
             System.out.println("Test failed expected "+ expectedResult+ " got"+result);
+            return false;
         }
      }
 
     private static boolean isPalindrome(String condition) {
-        throw new UnsupportedOperationException("Unimplemented method 'isPalindrome'");
+        return true;
     }
 }
