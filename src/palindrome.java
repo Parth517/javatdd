@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class palindrome {
     public static void main(String[] args) {
@@ -40,10 +42,12 @@ public class palindrome {
      }
 
     private static boolean isPalindrome(String condition) {
-        System.out.println(condition.length());
-        int length=condition.length();
-        for(int i=0;i<length/2;i++){
-            if(condition.charAt(i)!=condition.charAt(length-i-1)){
+        Deque<Character> checkPalindrome=new ArrayDeque<>();
+        for(char c: condition.toCharArray()){
+            checkPalindrome.addLast(c);
+        }
+        while(checkPalindrome.size()>1){
+            if(checkPalindrome.removeFirst()!=checkPalindrome.removeLast()){
                 return false;
             }
         }
