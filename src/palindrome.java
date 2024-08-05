@@ -29,4 +29,8 @@ public class palindrome {
             System.out.println("Test failed expected "+ expectedResult+ " got"+result);
         }
      }
+
+    private static boolean isPalindrome(String condition) {
+        throw new UnsupportedOperationException("Unimplemented method 'isPalindrome'");
+    }
 }
