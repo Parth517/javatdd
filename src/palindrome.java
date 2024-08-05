@@ -21,7 +21,12 @@ public class palindrome {
         
     }
 
-    private static boolean testIsPalindrome(String string, boolean b) {
-        throw new UnsupportedOperationException("Unimplemented method 'testIsPalindrome'");
-    }
+    private static boolean testIsPalindrome(String condition, boolean expectedResult) {
+        boolean result=isPalindrome(condition);
+        if(result==expectedResult){
+            System.out.println("Test passed expected "+expectedResult+" got "+result);
+        }else{
+            System.out.println("Test failed expected "+ expectedResult+ " got"+result);
+        }
+     }
 }
